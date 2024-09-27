@@ -40,23 +40,23 @@ Then commit the changes to `go.mod` and `go.sum`.
 To use the provider, add the provider configuration to your Terraform scripts. For example:
 
 ```hcl
-provider "juicefs-cloud" {
+provider "juicefscloud" {
   access_key = ..your.access.key..
   secret_key = ..your.secret.key..
 }
 
-data "juicefs-cloud_cloud" "aws" {
+data "juicefscloud_cloud" "aws" {
   name = "AWS"
 }
 
-data "juicefs-cloud_region" "aws_oregon" {
-  cloud = data.juicefs-cloud_cloud.aws.id
+data "juicefscloud_region" "aws_oregon" {
+  cloud = data.juicefscloud_cloud.aws.id
   name = "us-west-2"
 }
 
-resource "juicefs-cloud_volume" "test" {
+resource "juicefscloud_volume" "test" {
   name   = "example-tf-vol1"
-  region = data.juicefs-cloud_region.aws_oregon.id
+  region = data.juicefscloud_region.aws_oregon.id
 }
 ```
 

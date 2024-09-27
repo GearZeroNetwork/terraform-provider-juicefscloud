@@ -41,7 +41,7 @@ type juicefsCloudProviderModel struct {
 }
 
 func (p *juicefsCloudProvider) Metadata(ctx context.Context, req provider.MetadataRequest, resp *provider.MetadataResponse) {
-	resp.TypeName = "juicefs-cloud"
+	resp.TypeName = "juicefscloud"
 	resp.Version = p.version
 }
 

@@ -1,7 +1,7 @@
 terraform {
   required_providers {
-    juicefs-cloud = {
-      source  = "github.com/GearZeroNetwork/juicefscloud"
+    juicefscloud = {
+      source  = "GearZeroNetwork/juicefscloud"
       version = "1.0.0"
     }
   }
