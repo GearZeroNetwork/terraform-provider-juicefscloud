@@ -182,7 +182,7 @@ func (r *VolumeResource) Schema(ctx context.Context, req resource.SchemaRequest,
 			"bucket": schema.StringAttribute{
 				MarkdownDescription: "Bucket for the volume",
 				Required:            false,
-				Optional:            false,
+				Optional:            true,
 				Computed:            true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.UseStateForUnknown(),
